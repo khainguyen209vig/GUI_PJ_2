@@ -122,7 +122,7 @@ st.markdown(
     .main-title {
         font-size: 36px;
         font-weight: bold;
-        color: #4CAF50; /* Màu xanh lá */
+        color: ##333333; 
         text-align: center;
         margin-bottom: 20px;
     }
@@ -130,7 +130,7 @@ st.markdown(
         font-size: 28px;
         font-style: italic;
         font-weight: 600;
-        color: #FF5733; /* Màu cam đỏ */
+        color: #FF4500; 
         text-align: center;
     }
     </style>
