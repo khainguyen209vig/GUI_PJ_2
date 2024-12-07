@@ -116,8 +116,31 @@ st.sidebar.write("""#### *Giảng viên hướng dẫn:*
 st.sidebar.write("""#### Thời gian thực hiện: 12/2024""")
 
 
-st.title("Data Science Project:")
-st.write("## ***Recommender System***")
+st.markdown(
+    """
+    <style>
+    .main-title {
+        font-size: 36px;
+        font-weight: bold;
+        color: #4CAF50; /* Màu xanh lá */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .sub-title {
+        font-size: 28px;
+        font-style: italic;
+        font-weight: 600;
+        color: #FF5733; /* Màu cam đỏ */
+        text-align: center;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Hiển thị nội dung với CSS
+st.markdown('<div class="main-title">Data Science Project:</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-title">***Recommender System***</div>', unsafe_allow_html=True)
 
 #Chi tiết từng page
 if choice == 'Tổng Quan':
