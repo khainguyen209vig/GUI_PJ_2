@@ -241,7 +241,7 @@ elif choice == 'Đề xuất dựa trên mã sản phẩm':
     st.subheader('Đề xuất dựa trên mã sản phẩm')
     #Đọc file
     sp = sp = pd.read_csv('All_San_pham_clean.csv',sep=';')
-    cosine_matrix = np.load('cosine_similarity.npy')
+    cosine_matrix = np.load('cosine_similarity.npy', allow_pickle=True)
     df_cosine = pd.DataFrame(cosine_matrix)
     sp_sample = sp.sample(n=15, random_state=40)
 
@@ -351,7 +351,7 @@ elif choice == 'Đề xuất dựa trên UserID':
     df = pd.read_csv('df_data_user.csv')
 
     with open('knn_baseline_model.pkl', 'rb') as f:
-        algorithm = pickle.load(f)
+        algorithm = pickle.load(f, allow_pickle=True)
     
     st.subheader('Đề xuất dựa trên UserID')
     user_input = st.text_input("Nhập mã khách hàng của bạn:")
