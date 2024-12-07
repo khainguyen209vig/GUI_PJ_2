@@ -140,7 +140,7 @@ st.markdown(
 
 # Hiển thị nội dung với CSS
 st.markdown('<div class="main-title">Data Science Project:</div>', unsafe_allow_html=True)
-st.markdown('<div class="sub-title">***Recommender System***</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-title">🌟Recommender System🌟</div>', unsafe_allow_html=True)
 
 #Chi tiết từng page
 if choice == 'Tổng Quan':
