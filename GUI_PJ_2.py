@@ -4,6 +4,7 @@ import pickle
 import base64
 import numpy as np
 from surprise import KNNBaseline
+import gzip
 
 # Các Def cần thiết
 def get_top_3_similar_products(ma_sp, sp, corr_mat):
@@ -350,7 +351,7 @@ elif choice == 'Đề xuất dựa trên mã sản phẩm':
 elif choice == 'Đề xuất dựa trên UserID':
     df = pd.read_csv('df_data_user.csv')
 
-    with open('knn_baseline_model.pkl', 'rb') as f:
+    with gzip.open('knn_model_compressed.pkl.gz', 'rb') as f:
         algorithm = pickle.load(f)
     
     st.subheader('Đề xuất dựa trên UserID')
