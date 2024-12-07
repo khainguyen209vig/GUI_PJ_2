@@ -351,7 +351,7 @@ elif choice == 'Đề xuất dựa trên UserID':
     df = pd.read_csv('df_data_user.csv')
 
     with open('knn_baseline_model.pkl', 'rb') as f:
-        algorithm = pickle.load(f, allow_pickle=True)
+        algorithm = pickle.load(f)
     
     st.subheader('Đề xuất dựa trên UserID')
     user_input = st.text_input("Nhập mã khách hàng của bạn:")
