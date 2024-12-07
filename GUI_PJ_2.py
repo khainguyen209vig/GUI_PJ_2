@@ -242,7 +242,9 @@ elif choice == 'Đề xuất dựa trên mã sản phẩm':
     st.subheader('Đề xuất dựa trên mã sản phẩm')
     #Đọc file
     sp = sp = pd.read_csv('All_San_pham_clean.csv',sep=';')
-    cosine_matrix = np.load('cosine_similarity.npy', allow_pickle=True)
+    # cosine_matrix = np.load('cosine_similarity.npy', allow_pickle=True)
+    with gzip.GzipFile('cosine_similarity.npy.gz', 'rb') as f:
+        cosine_matrix = np.load(f)
     df_cosine = pd.DataFrame(cosine_matrix)
     sp_sample = sp.sample(n=15, random_state=40)
 
