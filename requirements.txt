@@ -1,0 +1,7 @@
+streamlit==1.40.2
+numpy==1.26.4
+pandas==1.5.3
+base64
+pickle
+scikit-surprise==1.1.4
+surprise==0.1
