@@ -350,7 +350,7 @@ elif choice == 'Đề xuất dựa trên mã sản phẩm':
 elif choice == 'Đề xuất dựa trên UserID':
     df = pd.read_csv('df_data_user.csv')
 
-    with open('knn_baseline_model.pkl', 'rb') as f:
+    with open('knn_baseline_model.pkl', 'r') as f:
         algorithm = pickle.load(f)
     
     st.subheader('Đề xuất dựa trên UserID')
